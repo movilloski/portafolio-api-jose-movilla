@@ -1,0 +1,384 @@
+{
+	"info": {
+		"_postman_id": "c61cf2fe-479c-4ce0-ae44-1d44051f1c41",
+		"name": "Portafolio API - José Movilla",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+		"_exporter_id": "46698013",
+		"_collection_link": "https://josemovilla.postman.co/workspace/cc30e656-835a-48cb-8e1b-2b3387a2db90/collection/46698013-c61cf2fe-479c-4ce0-ae44-1d44051f1c41?action=share&source=collection_link&creator=46698013"
+	},
+	"item": [
+		{
+			"name": "clima",
+			"item": [
+				{
+					"name": "Clima Montería GET",
+					"request": {
+						"auth": {
+							"type": "noauth"
+						},
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "https://api.open-meteo.com/v1/forecast?latitude=8.74798&longitude=-75.88143&current_weather=true&hourly=temperature_2m,weathercode",
+							"protocol": "https",
+							"host": [
+								"api",
+								"open-meteo",
+								"com"
+							],
+							"path": [
+								"v1",
+								"forecast"
+							],
+							"query": [
+								{
+									"key": "latitude",
+									"value": "8.74798"
+								},
+								{
+									"key": "longitude",
+									"value": "-75.88143"
+								},
+								{
+									"key": "current_weather",
+									"value": "true"
+								},
+								{
+									"key": "hourly",
+									"value": "temperature_2m,weathercode"
+								}
+							]
+						},
+						"description": "StartFragmentConsulta del clima actual y pronóstico por hora en Montería, Córdoba (Colombia) usando la API de Open-Meteo. Esta prueba usa método GET y parámetros como latitud, longitud, y tipo de datos a mostrar.EndFragment"
+					},
+					"response": [
+						{
+							"name": "Clima Montería GET",
+							"originalRequest": {
+								"method": "GET",
+								"header": [],
+								"url": {
+									"raw": "https://api.open-meteo.com/v1/forecast?latitude=8.74798&longitude=-75.88143&current_weather=true&hourly=temperature_2m,weathercode",
+									"protocol": "https",
+									"host": [
+										"api",
+										"open-meteo",
+										"com"
+									],
+									"path": [
+										"v1",
+										"forecast"
+									],
+									"query": [
+										{
+											"key": "latitude",
+											"value": "8.74798"
+										},
+										{
+											"key": "longitude",
+											"value": "-75.88143"
+										},
+										{
+											"key": "current_weather",
+											"value": "true"
+										},
+										{
+											"key": "hourly",
+											"value": "temperature_2m,weathercode"
+										}
+									]
+								}
+							},
+							"status": "OK",
+							"code": 200,
+							"_postman_previewlanguage": "json",
+							"header": [
+								{
+									"key": "Date",
+									"value": "Sat, 12 Jul 2025 04:04:36 GMT"
+								},
+								{
+									"key": "Content-Type",
+									"value": "application/json; charset=utf-8"
+								},
+								{
+									"key": "Transfer-Encoding",
+									"value": "chunked"
+								},
+								{
+									"key": "Connection",
+									"value": "keep-alive"
+								},
+								{
+									"key": "Content-Encoding",
+									"value": "deflate"
+								}
+							],
+							"cookie": [],
+							"body": "{\n    \"latitude\": 8.75,\n    \"longitude\": -75.875,\n    \"generationtime_ms\": 0.7255077362060547,\n    \"utc_offset_seconds\": 0,\n    \"timezone\": \"GMT\",\n    \"timezone_abbreviation\": \"GMT\",\n    \"elevation\": 18,\n    \"current_weather_units\": {\n        \"time\": \"iso8601\",\n        \"interval\": \"seconds\",\n        \"temperature\": \"°C\",\n        \"windspeed\": \"km/h\",\n        \"winddirection\": \"°\",\n        \"is_day\": \"\",\n        \"weathercode\": \"wmo code\"\n    },\n    \"current_weather\": {\n        \"time\": \"2025-07-12T04:00\",\n        \"interval\": 900,\n        \"temperature\": 26,\n        \"windspeed\": 2.1,\n        \"winddirection\": 329,\n        \"is_day\": 0,\n        \"weathercode\": 3\n    },\n    \"hourly_units\": {\n        \"time\": \"iso8601\",\n        \"temperature_2m\": \"°C\",\n        \"weathercode\": \"wmo code\"\n    },\n    \"hourly\": {\n        \"time\": [\n            \"2025-07-12T00:00\",\n            \"2025-07-12T01:00\",\n            \"2025-07-12T02:00\",\n            \"2025-07-12T03:00\",\n            \"2025-07-12T04:00\",\n            \"2025-07-12T05:00\",\n            \"2025-07-12T06:00\",\n            \"2025-07-12T07:00\",\n            \"2025-07-12T08:00\",\n            \"2025-07-12T09:00\",\n            \"2025-07-12T10:00\",\n            \"2025-07-12T11:00\",\n            \"2025-07-12T12:00\",\n            \"2025-07-12T13:00\",\n            \"2025-07-12T14:00\",\n            \"2025-07-12T15:00\",\n            \"2025-07-12T16:00\",\n            \"2025-07-12T17:00\",\n            \"2025-07-12T18:00\",\n            \"2025-07-12T19:00\",\n            \"2025-07-12T20:00\",\n            \"2025-07-12T21:00\",\n            \"2025-07-12T22:00\",\n            \"2025-07-12T23:00\",\n            \"2025-07-13T00:00\",\n            \"2025-07-13T01:00\",\n            \"2025-07-13T02:00\",\n            \"2025-07-13T03:00\",\n            \"2025-07-13T04:00\",\n            \"2025-07-13T05:00\",\n            \"2025-07-13T06:00\",\n            \"2025-07-13T07:00\",\n            \"2025-07-13T08:00\",\n            \"2025-07-13T09:00\",\n            \"2025-07-13T10:00\",\n            \"2025-07-13T11:00\",\n            \"2025-07-13T12:00\",\n            \"2025-07-13T13:00\",\n            \"2025-07-13T14:00\",\n            \"2025-07-13T15:00\",\n            \"2025-07-13T16:00\",\n            \"2025-07-13T17:00\",\n            \"2025-07-13T18:00\",\n            \"2025-07-13T19:00\",\n            \"2025-07-13T20:00\",\n            \"2025-07-13T21:00\",\n            \"2025-07-13T22:00\",\n            \"2025-07-13T23:00\",\n            \"2025-07-14T00:00\",\n            \"2025-07-14T01:00\",\n            \"2025-07-14T02:00\",\n            \"2025-07-14T03:00\",\n            \"2025-07-14T04:00\",\n            \"2025-07-14T05:00\",\n            \"2025-07-14T06:00\",\n            \"2025-07-14T07:00\",\n            \"2025-07-14T08:00\",\n            \"2025-07-14T09:00\",\n            \"2025-07-14T10:00\",\n            \"2025-07-14T11:00\",\n            \"2025-07-14T12:00\",\n            \"2025-07-14T13:00\",\n            \"2025-07-14T14:00\",\n            \"2025-07-14T15:00\",\n            \"2025-07-14T16:00\",\n            \"2025-07-14T17:00\",\n            \"2025-07-14T18:00\",\n            \"2025-07-14T19:00\",\n            \"2025-07-14T20:00\",\n            \"2025-07-14T21:00\",\n            \"2025-07-14T22:00\",\n            \"2025-07-14T23:00\",\n            \"2025-07-15T00:00\",\n            \"2025-07-15T01:00\",\n            \"2025-07-15T02:00\",\n            \"2025-07-15T03:00\",\n            \"2025-07-15T04:00\",\n            \"2025-07-15T05:00\",\n            \"2025-07-15T06:00\",\n            \"2025-07-15T07:00\",\n            \"2025-07-15T08:00\",\n            \"2025-07-15T09:00\",\n            \"2025-07-15T10:00\",\n            \"2025-07-15T11:00\",\n            \"2025-07-15T12:00\",\n            \"2025-07-15T13:00\",\n            \"2025-07-15T14:00\",\n            \"2025-07-15T15:00\",\n            \"2025-07-15T16:00\",\n            \"2025-07-15T17:00\",\n            \"2025-07-15T18:00\",\n            \"2025-07-15T19:00\",\n            \"2025-07-15T20:00\",\n            \"2025-07-15T21:00\",\n            \"2025-07-15T22:00\",\n            \"2025-07-15T23:00\",\n            \"2025-07-16T00:00\",\n            \"2025-07-16T01:00\",\n            \"2025-07-16T02:00\",\n            \"2025-07-16T03:00\",\n            \"2025-07-16T04:00\",\n            \"2025-07-16T05:00\",\n            \"2025-07-16T06:00\",\n            \"2025-07-16T07:00\",\n            \"2025-07-16T08:00\",\n            \"2025-07-16T09:00\",\n            \"2025-07-16T10:00\",\n            \"2025-07-16T11:00\",\n            \"2025-07-16T12:00\",\n            \"2025-07-16T13:00\",\n            \"2025-07-16T14:00\",\n            \"2025-07-16T15:00\",\n            \"2025-07-16T16:00\",\n            \"2025-07-16T17:00\",\n            \"2025-07-16T18:00\",\n            \"2025-07-16T19:00\",\n            \"2025-07-16T20:00\",\n            \"2025-07-16T21:00\",\n            \"2025-07-16T22:00\",\n            \"2025-07-16T23:00\",\n            \"2025-07-17T00:00\",\n            \"2025-07-17T01:00\",\n            \"2025-07-17T02:00\",\n            \"2025-07-17T03:00\",\n            \"2025-07-17T04:00\",\n            \"2025-07-17T05:00\",\n            \"2025-07-17T06:00\",\n            \"2025-07-17T07:00\",\n            \"2025-07-17T08:00\",\n            \"2025-07-17T09:00\",\n            \"2025-07-17T10:00\",\n            \"2025-07-17T11:00\",\n            \"2025-07-17T12:00\",\n            \"2025-07-17T13:00\",\n            \"2025-07-17T14:00\",\n            \"2025-07-17T15:00\",\n            \"2025-07-17T16:00\",\n            \"2025-07-17T17:00\",\n            \"2025-07-17T18:00\",\n            \"2025-07-17T19:00\",\n            \"2025-07-17T20:00\",\n            \"2025-07-17T21:00\",\n            \"2025-07-17T22:00\",\n            \"2025-07-17T23:00\",\n            \"2025-07-18T00:00\",\n            \"2025-07-18T01:00\",\n            \"2025-07-18T02:00\",\n            \"2025-07-18T03:00\",\n            \"2025-07-18T04:00\",\n            \"2025-07-18T05:00\",\n            \"2025-07-18T06:00\",\n            \"2025-07-18T07:00\",\n            \"2025-07-18T08:00\",\n            \"2025-07-18T09:00\",\n            \"2025-07-18T10:00\",\n            \"2025-07-18T11:00\",\n            \"2025-07-18T12:00\",\n            \"2025-07-18T13:00\",\n            \"2025-07-18T14:00\",\n            \"2025-07-18T15:00\",\n            \"2025-07-18T16:00\",\n            \"2025-07-18T17:00\",\n            \"2025-07-18T18:00\",\n            \"2025-07-18T19:00\",\n            \"2025-07-18T20:00\",\n            \"2025-07-18T21:00\",\n            \"2025-07-18T22:00\",\n            \"2025-07-18T23:00\"\n        ],\n        \"temperature_2m\": [\n            27.3,\n            27,\n            26.7,\n            26.4,\n            25.9,\n            25.5,\n            25.3,\n            25.1,\n            24.9,\n            24.6,\n            24.4,\n            24.2,\n            25.3,\n            26.7,\n            27.6,\n            28.6,\n            29.3,\n            29.6,\n            30.2,\n            30.9,\n            30.7,\n            30.2,\n            29.7,\n            28.6,\n            27.4,\n            26.8,\n            26.4,\n            26.3,\n            25.9,\n            25.6,\n            25.6,\n            25.4,\n            25.2,\n            25.1,\n            24.9,\n            24.8,\n            25.4,\n            26.5,\n            27.6,\n            29,\n            29.7,\n            31,\n            32,\n            32.1,\n            31.9,\n            31.7,\n            29.9,\n            28.7,\n            27.7,\n            26.9,\n            26.5,\n            26.4,\n            26.2,\n            26,\n            25.8,\n            25.7,\n            25.3,\n            24.9,\n            24.6,\n            24.4,\n            24.6,\n            25.6,\n            26.8,\n            27.9,\n            28.9,\n            30,\n            30.9,\n            31.7,\n            32.2,\n            32.5,\n            32.2,\n            31,\n            28.9,\n            27.8,\n            27.1,\n            26.7,\n            26.5,\n            26.5,\n            26.3,\n            26.2,\n            26.1,\n            26.1,\n            26.1,\n            26.2,\n            26.5,\n            27.3,\n            28.4,\n            29.5,\n            30.6,\n            31.8,\n            32.6,\n            33.1,\n            33.3,\n            32.9,\n            31.7,\n            30,\n            28.6,\n            27.9,\n            27.6,\n            27.4,\n            27.1,\n            26.8,\n            26.6,\n            26.3,\n            26,\n            25.9,\n            25.9,\n            26,\n            26.5,\n            27.4,\n            28.6,\n            29.8,\n            31,\n            32.3,\n            33.1,\n            33.1,\n            32.6,\n            31.9,\n            30.9,\n            29.7,\n            28.6,\n            27.9,\n            27.4,\n            27,\n            26.6,\n            26.4,\n            26.2,\n            25.9,\n            25.7,\n            25.5,\n            25.5,\n            25.5,\n            26,\n            27,\n            28.3,\n            29.7,\n            31,\n            32.3,\n            33.1,\n            33.2,\n            32.8,\n            32.1,\n            31.2,\n            29.9,\n            28.9,\n            28.1,\n            27.5,\n            27,\n            26.7,\n            26.5,\n            26.3,\n            26.1,\n            25.9,\n            25.9,\n            26,\n            26.1,\n            26.6,\n            27.7,\n            29,\n            30.3,\n            31.4,\n            32.5,\n            33.3,\n            34.1,\n            34.6,\n            34.4,\n            33,\n            30.9\n        ],\n        \"weathercode\": [\n            80,\n            3,\n            3,\n            3,\n            3,\n            3,\n            3,\n            45,\n            45,\n            45,\n            45,\n            45,\n            45,\n            3,\n            3,\n            3,\n            3,\n            80,\n            3,\n            3,\n            80,\n            80,\n            80,\n            3,\n            3,\n            3,\n            3,\n            3,\n            3,\n            3,\n            3,\n            95,\n            80,\n            3,\n            3,\n            3,\n            3,\n            3,\n            3,\n            3,\n            3,\n            3,\n            3,\n            3,\n            80,\n            3,\n            95,\n            80,\n            3,\n            95,\n            80,\n            3,\n            3,\n            3,\n            3,\n            3,\n            96,\n            95,\n            61,\n            61,\n            61,\n            3,\n            3,\n            3,\n            3,\n            3,\n            3,\n            3,\n            3,\n            2,\n            2,\n            3,\n            3,\n            2,\n            2,\n            3,\n            3,\n            3,\n            2,\n            2,\n            2,\n            2,\n            3,\n            3,\n            3,\n            80,\n            80,\n            80,\n            3,\n            3,\n            3,\n            3,\n            3,\n            3,\n            3,\n            3,\n            3,\n            3,\n            3,\n            3,\n            3,\n            3,\n            3,\n            45,\n            45,\n            45,\n            45,\n            45,\n            45,\n            3,\n            3,\n            3,\n            3,\n            3,\n            3,\n            80,\n            80,\n            80,\n            3,\n            3,\n            3,\n            3,\n            3,\n            3,\n            80,\n            80,\n            80,\n            3,\n            3,\n            3,\n            45,\n            45,\n            45,\n            2,\n            2,\n            2,\n            3,\n            3,\n            3,\n            80,\n            80,\n            80,\n            1,\n            1,\n            1,\n            1,\n            1,\n            1,\n            2,\n            2,\n            2,\n            45,\n            45,\n            45,\n            3,\n            3,\n            3,\n            80,\n            80,\n            80,\n            3,\n            3,\n            3,\n            3,\n            3,\n            3,\n            3,\n            3\n        ]\n    }\n}"
+						}
+					]
+				}
+			]
+		},
+		{
+			"name": "Perros",
+			"item": [
+				{
+					"name": "TheDogAPI",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "https://api.thedogapi.com/v1/breeds/search?q=Golden%20Retriever",
+							"protocol": "https",
+							"host": [
+								"api",
+								"thedogapi",
+								"com"
+							],
+							"path": [
+								"v1",
+								"breeds",
+								"search"
+							],
+							"query": [
+								{
+									"key": "q",
+									"value": "Golden%20Retriever"
+								}
+							]
+						},
+						"description": "StartFragment\n\n> \n\nEsta solicitud consulta información de la raza **Golden Retriever** usando la API pública de The Dog API.  \n  \nSe obtiene peso, altura, grupo, esperanza de vida y temperamento.  \n  \nMétodo: `GET`  \n  \nURL: `https://api.thedogapi.com/v1/breeds/search?q=Golden Retriever`\n\n \n  \n\nEndFragment"
+					},
+					"response": [
+						{
+							"name": "New Request",
+							"originalRequest": {
+								"method": "GET",
+								"header": [],
+								"url": {
+									"raw": "https://api.thedogapi.com/v1/breeds/search?q=Golden%20Retriever",
+									"protocol": "https",
+									"host": [
+										"api",
+										"thedogapi",
+										"com"
+									],
+									"path": [
+										"v1",
+										"breeds",
+										"search"
+									],
+									"query": [
+										{
+											"key": "q",
+											"value": "Golden%20Retriever"
+										}
+									]
+								}
+							},
+							"status": "OK",
+							"code": 200,
+							"_postman_previewlanguage": "json",
+							"header": [
+								{
+									"key": "x-dns-prefetch-control",
+									"value": "off"
+								},
+								{
+									"key": "x-frame-options",
+									"value": "SAMEORIGIN"
+								},
+								{
+									"key": "strict-transport-security",
+									"value": "max-age=15552000; includeSubDomains"
+								},
+								{
+									"key": "x-download-options",
+									"value": "noopen"
+								},
+								{
+									"key": "x-content-type-options",
+									"value": "nosniff"
+								},
+								{
+									"key": "x-xss-protection",
+									"value": "1; mode=block"
+								},
+								{
+									"key": "vary",
+									"value": "Origin"
+								},
+								{
+									"key": "content-type",
+									"value": "application/json; charset=utf-8"
+								},
+								{
+									"key": "x-response-time",
+									"value": "48ms"
+								},
+								{
+									"key": "x-cloud-trace-context",
+									"value": "bd7d130b9f95b32cfba775f113923ee3"
+								},
+								{
+									"key": "date",
+									"value": "Sat, 12 Jul 2025 05:11:14 GMT"
+								},
+								{
+									"key": "server",
+									"value": "Google Frontend"
+								},
+								{
+									"key": "Content-Length",
+									"value": "330"
+								}
+							],
+							"cookie": [],
+							"body": "[\n    {\n        \"weight\": {\n            \"imperial\": \"55 - 75\",\n            \"metric\": \"25 - 34\"\n        },\n        \"height\": {\n            \"imperial\": \"21.5 - 24\",\n            \"metric\": \"55 - 61\"\n        },\n        \"id\": 121,\n        \"name\": \"Golden Retriever\",\n        \"bred_for\": \"Retrieving\",\n        \"breed_group\": \"Sporting\",\n        \"life_span\": \"10 - 12 years\",\n        \"temperament\": \"Intelligent, Kind, Reliable, Friendly, Trustworthy, Confident\",\n        \"reference_image_id\": \"HJ7Pzg5EQ\"\n    }\n]"
+						}
+					]
+				},
+				{
+					"name": "API Imagen Raza Perro",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "https://api.thedogapi.com/v1/breeds?limit=5&page=0",
+							"protocol": "https",
+							"host": [
+								"api",
+								"thedogapi",
+								"com"
+							],
+							"path": [
+								"v1",
+								"breeds"
+							],
+							"query": [
+								{
+									"key": "limit",
+									"value": "5"
+								},
+								{
+									"key": "page",
+									"value": "0"
+								}
+							]
+						},
+						"description": "StartFragment\n\nEsta solicitud realiza una consulta a la API pública de **The Dog API** para obtener información de las **primeras 5 razas de perros** disponibles en la base de datos.\n\nLa solicitud utiliza el método **GET** al endpoint:  \n`https://api.thedogapi.com/v1/breeds?limit=5&page=0`\n\nLa respuesta incluye un listado con detalles de cada raza, como:\n\n- **Nombre** de la raza (`name`)\n    \n- **Peso y altura** en sistema imperial y métrico (`weight`, `height`)\n    \n- **Finalidad de cría original** (`bred_for`)\n    \n- **Grupo racial** (`breed_group`)\n    \n- **Esperanza de vida** (`life_span`)\n    \n- **Temperamento** (`temperament`)\n    \n- **País de origen** (`origin`)\n    \n- **ID de imagen** (`reference_image_id`)\n    \n\nEsta solicitud forma parte del portafolio técnico de José Movilla y tiene fines educativos. La información visual puede ser complementada construyendo las URLs de imagen usando el campo `reference_image_id`.\n\nEndFragment"
+					},
+					"response": [
+						{
+							"name": "New Request",
+							"originalRequest": {
+								"method": "GET",
+								"header": [],
+								"url": {
+									"raw": "https://api.thedogapi.com/v1/breeds?limit=5&page=0",
+									"protocol": "https",
+									"host": [
+										"api",
+										"thedogapi",
+										"com"
+									],
+									"path": [
+										"v1",
+										"breeds"
+									],
+									"query": [
+										{
+											"key": "limit",
+											"value": "5"
+										},
+										{
+											"key": "page",
+											"value": "0"
+										}
+									]
+								}
+							},
+							"status": "OK",
+							"code": 200,
+							"_postman_previewlanguage": "json",
+							"header": [
+								{
+									"key": "x-dns-prefetch-control",
+									"value": "off"
+								},
+								{
+									"key": "x-frame-options",
+									"value": "SAMEORIGIN"
+								},
+								{
+									"key": "strict-transport-security",
+									"value": "max-age=15552000; includeSubDomains"
+								},
+								{
+									"key": "x-download-options",
+									"value": "noopen"
+								},
+								{
+									"key": "x-content-type-options",
+									"value": "nosniff"
+								},
+								{
+									"key": "x-xss-protection",
+									"value": "1; mode=block"
+								},
+								{
+									"key": "vary",
+									"value": "Origin"
+								},
+								{
+									"key": "pagination-count",
+									"value": "172"
+								},
+								{
+									"key": "pagination-page",
+									"value": "0"
+								},
+								{
+									"key": "pagination-limit",
+									"value": "5"
+								},
+								{
+									"key": "access-control-expose-headers",
+									"value": "Pagination-Count, Pagination-Page, Pagination-Limit"
+								},
+								{
+									"key": "content-type",
+									"value": "application/json; charset=utf-8"
+								},
+								{
+									"key": "x-response-time",
+									"value": "89ms"
+								},
+								{
+									"key": "x-cloud-trace-context",
+									"value": "47d384e2e5b250248cc513f752070c54"
+								},
+								{
+									"key": "date",
+									"value": "Sat, 12 Jul 2025 05:27:55 GMT"
+								},
+								{
+									"key": "server",
+									"value": "Google Frontend"
+								},
+								{
+									"key": "Content-Length",
+									"value": "1686"
+								}
+							],
+							"cookie": [],
+							"body": "[\n    {\n        \"weight\": {\n            \"imperial\": \"6 - 13\",\n            \"metric\": \"3 - 6\"\n        },\n        \"height\": {\n            \"imperial\": \"9 - 11.5\",\n            \"metric\": \"23 - 29\"\n        },\n        \"id\": 1,\n        \"name\": \"Affenpinscher\",\n        \"bred_for\": \"Small rodent hunting, lapdog\",\n        \"breed_group\": \"Toy\",\n        \"life_span\": \"10 - 12 years\",\n        \"temperament\": \"Stubborn, Curious, Playful, Adventurous, Active, Fun-loving\",\n        \"origin\": \"Germany, France\",\n        \"reference_image_id\": \"BJa4kxc4X\"\n    },\n    {\n        \"weight\": {\n            \"imperial\": \"50 - 60\",\n            \"metric\": \"23 - 27\"\n        },\n        \"height\": {\n            \"imperial\": \"25 - 27\",\n            \"metric\": \"64 - 69\"\n        },\n        \"id\": 2,\n        \"name\": \"Afghan Hound\",\n        \"country_code\": \"AG\",\n        \"bred_for\": \"Coursing and hunting\",\n        \"breed_group\": \"Hound\",\n        \"life_span\": \"10 - 13 years\",\n        \"temperament\": \"Aloof, Clownish, Dignified, Independent, Happy\",\n        \"origin\": \"Afghanistan, Iran, Pakistan\",\n        \"reference_image_id\": \"hMyT4CDXR\"\n    },\n    {\n        \"weight\": {\n            \"imperial\": \"44 - 66\",\n            \"metric\": \"20 - 30\"\n        },\n        \"height\": {\n            \"imperial\": \"30\",\n            \"metric\": \"76\"\n        },\n        \"id\": 3,\n        \"name\": \"African Hunting Dog\",\n        \"bred_for\": \"A wild pack animal\",\n        \"life_span\": \"11 years\",\n        \"temperament\": \"Wild, Hardworking, Dutiful\",\n        \"origin\": \"\",\n        \"reference_image_id\": \"rkiByec47\"\n    },\n    {\n        \"weight\": {\n            \"imperial\": \"40 - 65\",\n            \"metric\": \"18 - 29\"\n        },\n        \"height\": {\n            \"imperial\": \"21 - 23\",\n            \"metric\": \"53 - 58\"\n        },\n        \"id\": 4,\n        \"name\": \"Airedale Terrier\",\n        \"bred_for\": \"Badger, otter hunting\",\n        \"breed_group\": \"Terrier\",\n        \"life_span\": \"10 - 13 years\",\n        \"temperament\": \"Outgoing, Friendly, Alert, Confident, Intelligent, Courageous\",\n        \"origin\": \"United Kingdom, England\",\n        \"reference_image_id\": \"1-7cgoZSh\"\n    },\n    {\n        \"weight\": {\n            \"imperial\": \"90 - 120\",\n            \"metric\": \"41 - 54\"\n        },\n        \"height\": {\n            \"imperial\": \"28 - 34\",\n            \"metric\": \"71 - 86\"\n        },\n        \"id\": 5,\n        \"name\": \"Akbash Dog\",\n        \"bred_for\": \"Sheep guarding\",\n        \"breed_group\": \"Working\",\n        \"life_span\": \"10 - 12 years\",\n        \"temperament\": \"Loyal, Independent, Intelligent, Brave\",\n        \"origin\": \"\",\n        \"reference_image_id\": \"26pHT3Qk7\"\n    }\n]"
+						}
+					]
+				}
+			]
+		}
+	]
+}
